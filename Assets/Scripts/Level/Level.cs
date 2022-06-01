@@ -11,7 +11,7 @@ namespace Jamination5.Level
         private Emitter[] emitters =null;
         private int numberOfEmitters;
         private int numberOfEntities;
-        [SerializeField] float healthPoints = 20;
+        [SerializeField] float healthPoints = 3;
         
         public delegate void OnHealthDrop();
         public event OnHealthDrop onHealthDrop;

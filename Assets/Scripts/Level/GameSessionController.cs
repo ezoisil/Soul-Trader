@@ -5,9 +5,11 @@ using UnityEngine;
 namespace Jamination5.Level
 {
     public class GameSessionController : MonoBehaviour
-    {
-        Level currentLevel;
+    {       
         [SerializeField] GameObject levels;
+        
+        private int currentLevelIndex = -1;
+        private Level currentLevel;
 
         private void Awake()
         {
@@ -21,7 +23,7 @@ namespace Jamination5.Level
                 child.transform.gameObject.SetActive(false);
             }
 
-            StartLevel();
+            StartNextLevel();
         }
 
         private void Update()
@@ -33,13 +35,20 @@ namespace Jamination5.Level
             return currentLevel;
         }
         
-        public void StartLevel()
+        public void StartNextLevel()
         {
             if (levels != null & levels.transform.childCount > 0)
             {
-                print("Levels found");
-                currentLevel = levels.transform.GetChild(0).GetComponent<Level>();
-                print(currentLevel.gameObject.name);
+                currentLevel = levels.transform.GetChild(currentLevelIndex +1).GetComponent<Level>();
+                currentLevel.gameObject.SetActive(true);
+                currentLevelIndex++;
+            }
+        }
+        public void RestartLevel()
+        {
+            if (levels != null & levels.transform.childCount > 0)
+            {
+                currentLevel = levels.transform.GetChild(currentLevelIndex).GetComponent<Level>();
                 currentLevel.gameObject.SetActive(true);
             }
         }

@@ -7,7 +7,7 @@ namespace Jamination5.Level
  
     public class Emitter : MonoBehaviour
     {
-        [SerializeField] GameObject entityPrefab = null;
+        [SerializeField] GameObject[] entityPrefabs = null;
         [SerializeField] float frequency = 3.0f;
         public float range = 5.0f;
         public float startTime;
@@ -44,10 +44,10 @@ namespace Jamination5.Level
 
         private void Emit()
         {
-            if (entityPrefab == null)
+            if (entityPrefabs == null)
                 return;
 
-            GameObject entity = Instantiate(entityPrefab, GetLocation(), transform.rotation);
+            GameObject entity = Instantiate(entityPrefabs[Random.Range(0,entityPrefabs.Length-1)], GetLocation(), transform.rotation);
             entity.GetComponent<Entity>().SetEmitter(this);
         }
 

@@ -11,8 +11,15 @@ namespace Jamination5.Level
         [SerializeField] Color startColor = Color.white;
         [SerializeField] Color colorToFade = Color.black;
         [SerializeField] float fadeAmount = 0;
+        
         private Emitter emitter = null;
         private float timer;
+        private Renderer[] renderers;
+
+        private void Awake()
+        {
+            renderers = gameObject.GetComponentsInChildren<Renderer>();
+        }
 
 
         private void Start()
@@ -46,8 +53,11 @@ namespace Jamination5.Level
             if (fadeAmount < fadeDuration)
             {
 
-                fadeAmount += Time.deltaTime / fadeDuration; 
-                gameObject.GetComponent<Renderer>().material.color = Color.Lerp(startColor, colorToFade,fadeAmount);              
+                fadeAmount += Time.deltaTime / fadeDuration;
+                foreach (Renderer renderer in renderers)
+                {
+                    renderer.material.color = Color.Lerp(startColor, colorToFade, fadeAmount);
+                }
                
             }
 

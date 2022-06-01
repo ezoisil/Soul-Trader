@@ -43,7 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84150d2ac161b3f4e9ea60ede16298fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityPrefab: {fileID: 996019330942087168, guid: a4bdf9be009eb7f4baef6e0a2bd9a1c1, type: 3}
+  entityPrefabs:
+  - {fileID: 7022064319252764345, guid: d56dd4bcfd888e04bbfe1e53953ff1e3, type: 3}
+  - {fileID: 7022064319252764345, guid: eb66aa2680d53f84a9db98d4c8ef6a20, type: 3}
+  - {fileID: 7022064319252764345, guid: a3a0c96104dcc33459f7c6ee1d9a84ea, type: 3}
   frequency: 0
   range: 0
   startTime: 0
