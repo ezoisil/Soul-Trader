@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: dd322dc490129d3499e78c76852f958e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Justmore - Personal Use
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f64c71d2a7694334fab28b994d5c0029, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
