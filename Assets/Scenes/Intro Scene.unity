@@ -236,7 +236,7 @@ Transform:
   - {fileID: 1598259091}
   - {fileID: 1741659518}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &388559715
 GameObject:
@@ -272,7 +272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -132, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388559717
@@ -288,14 +288,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texts:
-  - "Ruhlar\u0131 yakala ve bana sadakatini kan\u0131tla."
-  - "Zorland\u0131\u011F\u0131nda onlar\u0131 g\xFC\xE7 i\xE7in takas etmekten \xE7ekinme."
-  - "Ya da... \xC7ekin!"
-  - "Benden ald\u0131\u011F\u0131n her yard\u0131m ile bu odada biri \xF6lecek."
-  - "Ba\u015Far\u0131s\u0131z olursan bu odadaki HERKES \xF6lecek."
-  - "Devam etmek i\xE7in [space] tu\u015Funa bas!"
-  speakDuration: 3
-  startIn: 3
+  - Capture the souls and prove me your loyalty.
+  - Do not hesitate to trade them for more power when you feel like sweating blood.
+  - However...
+  - Every trade will end up with someone's death in this room.
+  - Every failure will end up with everyone's death in this room. Except you and
+    me <3
+  - Press [space] to continue!
+  startIn: 2
+  minSpeakTime: 0.4
+  maxSpeakTime: 2.8
 --- !u!1 &530328831
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +394,7 @@ Transform:
   m_LocalScale: {x: 18, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &590624556
 GameObject:
@@ -423,7 +425,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &590624558
 MonoBehaviour:
@@ -501,7 +503,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369999696
 GameObject:
@@ -596,7 +598,7 @@ RectTransform:
   m_Children:
   - {fileID: 388559716}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -652,7 +654,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8ea05e63fd7afc84fb9d4065bd014725, type: 3}
   - {fileID: 8300000, guid: 2692ea70c54de334d9bf054c9a7858ab, type: 3}
   - {fileID: 8300000, guid: c70f03d319188f04a9f285a0d4a7ebfc, type: 3}
-  canPlay: 0
 --- !u!82 &1598259093
 AudioSource:
   m_ObjectHideFlags: 0
@@ -761,7 +762,7 @@ GameObject:
   - component: {fileID: 1685924738}
   - component: {fileID: 1685924739}
   m_Layer: 0
-  m_Name: Inside_C_69
+  m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -775,11 +776,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685924736}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -4.3368, y: 1.5550482, z: -5.74}
-  m_LocalScale: {x: 2.5756187, y: 2.5756187, z: 2.5756185}
+  m_LocalPosition: {x: 0.036945242, y: 0.69844085, z: -0.8987545}
+  m_LocalScale: {x: 0.40328386, y: 0.40328386, z: 0.40328372}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 7361338552079053040}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1685924738
 SpriteRenderer:
@@ -1007,9 +1008,9 @@ RectTransform:
   m_Father: {fileID: 388559716}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 509.37292, y: -31.686592}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 430, y: -0.0000076294}
   m_SizeDelta: {x: 702.746, y: 301.3732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830009627
@@ -1025,8 +1026,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texts: []
-  speakDuration: 0
   startIn: 0
+  minSpeakTime: 0
+  maxSpeakTime: 0
 --- !u!114 &1830009628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,7 +1052,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 86d853a79789d8b43ab0a5d84fd40af2, type: 2}
-  m_sharedMaterial: {fileID: -2454837066688485051, guid: 86d853a79789d8b43ab0a5d84fd40af2, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 62cc075d90c318e4d9e5db026adbca09, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1124,20 +1126,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830009625}
   m_CullTransparentMesh: 1
---- !u!4 &7361338552079053036
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7361338552079053039}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.62, y: -3.14, z: 0}
-  m_LocalScale: {x: 7.181137, y: 7.181137, z: 7.181137}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7361338552079053037
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1178,7 +1166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1552757265908239386, guid: f28feeac942e8304fbc35090a93282eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eddc3e302e4142b42a854bcac7dad4d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1197,12 +1185,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7361338552079053036}
+  - component: {fileID: 7361338552079053040}
   - component: {fileID: 7361338552079053037}
   m_Layer: 0
-  m_Name: Inside_C_47
+  m_Name: Statue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &7361338552079053040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361338552079053039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.08, y: -2.36, z: 0}
+  m_LocalScale: {x: 5.684088, y: 5.684088, z: 5.684088}
+  m_Children:
+  - {fileID: 1685924737}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

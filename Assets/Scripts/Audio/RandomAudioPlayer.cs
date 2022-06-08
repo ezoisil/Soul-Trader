@@ -14,7 +14,7 @@ namespace Jamination5.Audio
         private AudioSource audioSource;
         private bool isPlaying = false;
 
-        public bool canPlay = false;
+        [NonSerialized]public bool canPlay = false;
 
         private void Awake()
         {

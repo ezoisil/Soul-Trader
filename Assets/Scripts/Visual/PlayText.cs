@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using System;
-using UnityEngine.Events;
 
 namespace Jamination5.Visual
 {
     public class PlayText : MonoBehaviour
     {
         [TextArea][SerializeField] List<string> texts;
-        [Range(1, 10)][SerializeField] float speakDuration;
         [SerializeField] float startIn;
+        [Range(0,5)][SerializeField] float minSpeakTime = .4f;
+        [Range(0, 5)][SerializeField] float maxSpeakTime= 2.8f;
+
+
         private TextMeshProUGUI textTMP;
-        //private List<string> initilizedTexts;
         public delegate void OnPlayText(float duration);
         public delegate void OnEndText();
         public static event OnPlayText onPlayText;
@@ -38,16 +37,30 @@ namespace Jamination5.Visual
             {
                 i--;
                 textTMP.text = text;
-                onPlayText.Invoke(Mathf.Lerp(.08f,1.8f, text.Length) );
+                onPlayText.Invoke(SpeakDurationCalculator(text)); // BURAYA BAK!!!
                 if(i == 0)
                 {
                     onEndText.Invoke();
 
                 }
-                yield return new WaitForSeconds(speakDuration);
+                yield return new WaitForSeconds(SpeakDurationCalculator(text) +1);
                 
             }
 
+        }
+
+        private float SpeakDurationCalculator(string text)
+        {
+            float speakDuration;
+            float fraction;
+
+            fraction = Mathf.InverseLerp(0, 70, text.Length);
+            
+            speakDuration = Mathf.Lerp(minSpeakTime,maxSpeakTime, fraction);
+            print(speakDuration);
+            print(text.Length * 0.05f);
+
+            return speakDuration;
         }
     }
 }
